@@ -43,14 +43,15 @@ const Blogs = () => {
                   {/* Read More button at the bottom, aligned to the right */}
                  
                   <Link to={`/blog/${blog.slug}`}>
-                    <Button 
-                      variant="link" 
-                      className="mt-auto flex d-flex  Blog"
-                      style={{color: 'orange'}}
-                    >
-                      Read More <MdKeyboardDoubleArrowRight  className="ml-2 text-[#800080] text-2xl" />
-                    </Button>
-                 </Link>
+  <Button 
+    variant="link" 
+    className="mt-auto flex d-flex Blog no-underline"
+    style={{ color: 'orange', textDecoration: 'none' }}
+  >
+    Read More <MdKeyboardDoubleArrowRight className="ml-2 text-[#800080] text-2xl" />
+  </Button>
+</Link>
+
 
                  
 

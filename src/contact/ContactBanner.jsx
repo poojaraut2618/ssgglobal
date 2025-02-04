@@ -15,7 +15,7 @@ const Banner = () => {
 
       {/* Content */}
       <div className="relative container mx-auto px-6 text-white">
-        <h1 className="fw-bold text-4xl md:text-5xl max-w-60 ">
+        <h1 className="fw-bold text-4xl md:text-5xl max-w-md">
         We’re here to assist you with all your spiritual needs. Reach out to us anytime!
         </h1>
         

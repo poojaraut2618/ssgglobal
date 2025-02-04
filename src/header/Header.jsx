@@ -16,18 +16,18 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-xl mt-3 font-semibold text-gray-800">
-          <li><Link to="/" className="hover:text-purple-600 transition">Home</Link></li>
-          <li><Link to="/about" className="hover:text-purple-600 transition">About Us</Link></li>
-          <li><Link to="/about-puja" className="hover:text-purple-600 transition">About Puja</Link></li>
-          <li><Link to="/blog" className="hover:text-purple-600 transition">Blog</Link></li>
-          <li><Link to="/contact" className="hover:text-purple-600 transition">Contact</Link></li>
+          <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Home</Link></li>
+          <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">About Us</Link></li>
+          <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition onClick={() => window.scrollTo(0, 0)}">About Puja</Link></li>
+          <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Blog</Link></li>
+          <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Contact</Link></li>
         </ul>
 
         {/* CTA Button (Hidden on Mobile) */}
         <div className="hidden md:block">
-          <Link to="/signup" className="bg-[#800080] text-white px-3 py-2 rounded-full font-semibold hover:bg-yellow-600 transition">
+          <a href="#ReserveForm" className="bg-[#800080] text-white px-3 py-2 rounded-full font-semibold hover:bg-yellow-600 transition">
             Reserve Your Puja
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -41,15 +41,15 @@ const Navbar = () => {
         <button className="absolute top-5 right-6" onClick={() => setIsOpen(false)}>
           <X size={32} />
         </button>
-        <div className="flex flex-col items-center justify-center h-full space-y-6 text-lg font-medium">
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link to="/about-puja" onClick={() => setIsOpen(false)}>About Puja</Link>
-          <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-          <Link to="/signup" className="bg-yellow-500 text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition" onClick={() => setIsOpen(false)}>
-            Reserve Your Puja
-          </Link>
+        <div className="flex flex-col items-center justify-center h-full space-y-6 text-lg font-medium ">
+          <Link to="/" onClick={() => setIsOpen(false)} className="text-white">Home</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} className="text-white">About Us</Link>
+          <Link to="/about-puja" onClick={() => setIsOpen(false)} className="text-white">About Puja</Link>
+          <Link to="/blog" onClick={() => setIsOpen(false)} className="text-white">Blog</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white">Contact</Link>
+          
+          
+          
         </div>
       </div>
     </nav>

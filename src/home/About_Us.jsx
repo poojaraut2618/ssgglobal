@@ -5,10 +5,18 @@ import aboutImg2 from "../assets/about2.png";
 import aboutImg3 from "../assets/about3.png";
 import aboutImg4 from "../assets/about4.png";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import  { useEffect } from "react";
 
 const About_Us = () => {
+
+  useEffect(() => {
+          AOS.init({ duration: 1000 });
+        }, []);
+
   return (
-    <section className="container mx-auto px-6 py-12">
+    <section className="container mx-auto px-6 py-15">
       {/* Heading with Icons */}
       <div className="text-center mb-8">
         <div className="flex items-center justify-center gap-4">
@@ -21,10 +29,10 @@ const About_Us = () => {
       </div>
 
     <div className="flex flex-wrap justify-center gap-6 mb-10">
-            <img src={aboutImg1} alt="About 1" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
-            <img src={aboutImg2} alt="About 2" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
-            <img src={aboutImg3} alt="About 3" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
-            <img src={aboutImg4} alt="About 4" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
+            <img data-aos="flip-up"  src={aboutImg1} alt="About 1" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
+            <img data-aos="flip-up"  src={aboutImg2} alt="About 2" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
+            <img data-aos="flip-up"  src={aboutImg3} alt="About 3" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
+            <img data-aos="flip-up"  src={aboutImg4} alt="About 4" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
           </div>
 
       {/* Additional Content */}
@@ -34,7 +42,7 @@ const About_Us = () => {
       {/* Button */}
       <div className="text-center">
        <Link to="/about">
-              <button className="mt-4 primary-btn font-bold py-2 px-6 transition">
+              <button onClick={() => window.scrollTo(0, 0)} className="mt-4 primary-btn font-bold py-2 px-6 transition">
                 Know More
               </button>
               </Link>

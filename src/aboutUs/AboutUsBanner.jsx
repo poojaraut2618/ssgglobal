@@ -15,7 +15,7 @@ const Banner = () => {
             {/* Content */}
             <div className="relative container mx-auto px-6 text-white flex justify-end">
                 <div className="max-w-md">
-                    <h1 className="font-bold text-2xl ml-44 md:text-3xl">
+                    <h1 className="fw-bold text-4xl md:text-5xl max-w-md">
                         At SSG Global, we bring you closer to the divine through authentic spiritual practices.
                     </h1>
                 </div>

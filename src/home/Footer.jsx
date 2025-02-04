@@ -8,16 +8,25 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import  { useEffect } from "react";
 
 const Footer = () => {
+
+   useEffect(() => {
+              AOS.init({ duration: 1500 });
+            }, []);
+
+
   return (
-    <div>
+    <div className="mt-15">
       <footer className="bg-[#800080] text-white py-6">
         <div className="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Left Section - Logo */}
           <div className="text-center lg:text-left mt-3">
-            <img src={logo} alt="Logo" className="h-44" />
+            <img data-aos="flip-down" src={logo} alt="Logo" className="h-44" />
           </div>  
 
           {/* Left Section - Text */}
@@ -31,11 +40,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-1">Quick Links</h3>
             <ul className="space-y-2 text-left">
-              <li><Link to="/" className="text-white hover:text-blue-900 transition-colors duration-300">Home</Link></li>
-              <li><Link to="/about" className="text-white hover:text-blue-400 transition-colors duration-300">About Us</Link></li>
-              <li><Link to="/about-puja" className="text-white hover:text-blue-400 transition-colors duration-300">About Puja</Link></li>
-              <li><Link to="/blog" className="text-white hover:text-blue-400 transition-colors duration-300">Blog</Link></li>
-              <li><Link to="/contact" className="text-white hover:text-blue-400 transition-colors duration-300">Contact</Link></li>
+            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Home</Link></li>
+<li><Link to="/about" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Us</Link></li>
+<li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Puja</Link></li>
+<li><Link to="/blog" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Blog</Link></li>
+<li><Link to="/contact" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Contact</Link></li>
+
             </ul>
           </div>
 
@@ -43,12 +53,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-1">Contact Us</h3>
             
-            <p className="flex items-center space-x-2"><span><IoCallOutline /> </span><span>+91-12345 12345</span></p>
-            <p className="flex items-center space-x-2"><span><CiMail /></span> <span>loremipsum@gmail.com</span></p>
-            <p className="flex items-center space-x-2"><span><CiLocationOn /></span> <span>City, State, Country - 123456</span></p>
+            <p className="flex items-center space-x-2"><span><IoCallOutline /> </span> <a href="tel:+91 9923607845" className="text-white hover:text-gray-400">+91 9923607845 <br/> +91 9822965257 </a></p>
+            <p className="flex items-center space-x-2"><span><CiMail /></span> <a href="mailto:subramhnyamgiriswami@gmail.com" className="text-white hover:text-gray-400">subramhnyamgiriswami@gmail.com</a>
+            </p>
+
+            <p className="flex items-center space-x-2"><span><CiLocationOn /></span> <span>Kasili, Kopargaon, Ahmednagar</span></p>
             
             {/* Social Media Icons */}
-            <div className="flex justify-start space-x-4 mt-2">
+            <div  className="flex justify-start space-x-4 mt-2">
               <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><CiLinkedin className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
               <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaYoutube className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
               <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaInstagram className="text-white mt-3 text-2xl hover:text-blue-600"/></a>

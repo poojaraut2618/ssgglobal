@@ -4,7 +4,7 @@ import headingIcon from "../assets/icon.png";
 
 export default function Form() {
   return (
-    <Container>
+    <Container id="ReserveForm">
       <Card style={{border: "0"}}>
         <div className="text-center mb-4 mt-8">
           <div className="d-flex align-items-center justify-content-center gap-4">
@@ -16,7 +16,7 @@ export default function Form() {
             <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" />{" "}
             {/* Right Icon */}
           </div>
-          <p className="pr-16 pl-16 p-3">Take the first step towards inviting prosperity and harmony into your life. Reserve your puja today and let us help you connect with divine blessings.</p>
+          <p className="pr-16 pl-16 p-3 text-lg">Take the first step towards inviting prosperity and harmony into your life. Reserve your puja today and let us help you connect with divine blessings.</p>
         </div>
 
 

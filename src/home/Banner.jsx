@@ -21,7 +21,7 @@ const Banner = () => {
         </h1>
         
         <Link to="/about-puja">
-        <button className="mt-4 primary-btn font-bold py-2 px-6 transition">
+        <button onClick={() => window.scrollTo(0, 0)} className="mt-4 primary-btn font-bold py-2 px-6 transition">
           Know More
         </button>
         </Link>

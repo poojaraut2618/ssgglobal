@@ -93,3 +93,7 @@ input
  flex-grow: 1;
 }
 
+#Text
+{
+  font-size: 30px !important;
+}

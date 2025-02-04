@@ -1,35 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; 
+import { useParams } from "react-router-dom";
 import { Container, Card, Button } from "react-bootstrap";
 import { FaArrowLeft } from "react-icons/fa";
 
 
 const BlogDetails = () => {
-  const { slug } = useParams(); 
+  const { slug } = useParams();
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch('/Blogs.json')
+    fetch("/Blogs.json")
       .then((response) => response.json())
       .then((data) => {
-       
         const selectedBlog = data.find((blog) => blog.slug === slug);
-        setBlog(selectedBlog); 
+        setBlog(selectedBlog);
       })
-      .catch((error) => console.error('Fetch error:', error));
-  }, [slug]); 
+      .catch((error) => console.error("Fetch error:", error));
+  }, [slug]);
 
   return (
-    <Container className="mt-5 ">
+    <Container className="py-10">
       {blog ? (
         <Card className="border-0">
           <Card.Img variant="top" src={blog.image} alt={blog.name} />
           <Card.Body>
-          <Card.Title>{blog.name}</Card.Title>
-            <Card.Text>{blog.description}</Card.Text>
-            <Button variant="link" href="/blog" className="d-flex align-items-center">
-              <FaArrowLeft className="mr-2" /> Back to Blogs
-            </Button>
+            <Card.Title style={{ fontSize: "25px" }}>{blog.name}</Card.Title>
+            <Card.Text className="text-lg">{blog.description}</Card.Text>
+
+            <a href="/blog">
+              <Button
+                variant="link"
+                className="mt-auto flex d-flex  no-underline"
+                style={{ color: "orange", textDecoration: "none" }}
+              >
+                <FaArrowLeft className="mr-2 mt-1 text-[#800080]" /> Back to
+                Blogs
+              </Button>
+            </a>
           </Card.Body>
         </Card>
       ) : (

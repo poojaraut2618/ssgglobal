@@ -4,8 +4,8 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 export default function WhyPerform() {
   return (
-    <Container fluid="md">
-      <div className="text-center mb-4">
+    <Container fluid="md" className='py-10'>
+      <div className="text-center mb-4 ">
         <div className="d-flex align-items-center justify-content-center gap-4">
           <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" /> {/* Left Icon */}
           <h2 className="text-3xl md:text-4xl fw-bold primaryColor">
@@ -18,7 +18,7 @@ export default function WhyPerform() {
       {/* Benefits List */}
       <Row className="justify-content-center">
         <Col md={8} sm={10} xs={12}>
-          <ul className="text-start mx-auto list-disc" style={{ maxWidth: "600px", lineHeight: "1.8" }}>
+          <ul className="text-start mx-auto list-disc text-lg" style={{ maxWidth: "600px", lineHeight: "1.8" }}>
             <li>Removes financial obstacles and promotes prosperity.</li>
             <li>Enhances spiritual growth and inner peace.</li>
             <li>Invokes blessings for family harmony and health.</li>

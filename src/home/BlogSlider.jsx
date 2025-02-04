@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Carousel, Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom"; // For linking to the blog details page
-import { FaArrowRight } from "react-icons/fa";
 import headingIcon from "../assets/icon.png";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md"; 
 
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
@@ -18,7 +18,7 @@ const BlogSlider = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className="py-20">
       <div className="text-center mb-4 mt-8">
         <div className="d-flex align-items-center justify-content-center gap-4">
           <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />{" "}
@@ -60,20 +60,22 @@ const BlogSlider = () => {
                         />
                         <Card.Body>
                           <Card.Title>{blog.name}</Card.Title>
-                          <Card.Text>
+                          <Card.Text >
                             {blog.description.length > 50
                               ? `${blog.description.substring(0, 50)}...`
                               : blog.description}
                           </Card.Text>
                           <div className="text-right">
-                            <Link to={`/blog/${blog.slug}`}>
-                              <Button
-                                variant="link"
-                                className="mt-auto read-more-btn align-self-end d-flex align-items-center"
-                              >
-                                Read More <FaArrowRight className="ml-2" />
-                              </Button>
-                            </Link>
+                          <Link to={`/blog/${blog.slug}`}>
+  <Button 
+    variant="link" 
+    className="mt-auto flex d-flex Blog no-underline"
+    style={{ color: 'orange', textDecoration: 'none' }}
+  >
+    Read More <MdKeyboardDoubleArrowRight className="ml-2 text-[#800080] text-2xl" />
+  </Button>
+</Link>
+
                           </div>
                         </Card.Body>
                       </Card>

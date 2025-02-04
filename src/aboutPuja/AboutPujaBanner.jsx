@@ -10,12 +10,12 @@ const Banner = () => {
             }}
         >
             {/* Yellow overlay */}
-            <div className="absolute inset-0 bg-yellow-500 opacity-30"></div>
+            <div className="absolute inset-0 bg-purple-800 opacity-40"></div>
 
             {/* Content */}
             <div className="relative container mx-auto px-6 text-white flex justify-end">
                 <div className="max-w-md">
-                    <h1 className="font-bold text-2xl ml-44 md:text-3xl">
+                    <h1 className="fw-bold text-4xl md:text-5xl max-w-md">
                         Discover the sacred ritual that blesses every aspect of your life with the divine grace of the eight forms of Goddess Lakshmi.
                     </h1>
                 </div>

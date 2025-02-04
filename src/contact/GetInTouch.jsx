@@ -15,18 +15,18 @@ export default function GetInTouch() {
                   <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" /> {/* Right Icon */}
                 </div>
               </div>
-              <Row className="mb-4">
-  <Col md={4} className="d-flex flex-column align-items-center">
-    <div style={{ backgroundColor: "#FFFFF0"}}><img src={Contact} className="h-9 md:h-9 mb-2" alt="Icon Right" /></div>
-    <p style={{ backgroundColor: "#FFFFF0", paddingLeft: "50px", paddingRight: "50px" }}>+91-12345 12345</p>
+              <Row className="mb-4 py-">
+  <Col md={4} className="d-flex flex-column align-items-center py-3"  style={{ backgroundColor: "#FFFFF0"}}>
+    <div><img src={Contact} className="h-9 md:h-9 mb-2" alt="Icon Right" /></div>
+    <p style={{ backgroundColor: "#FFFFF0", paddingLeft: "50px", paddingRight: "50px" }}><a href="tel:+91 9923607845" className=" hover:text-gray-400 text-lg">+91 9923607845 <br/> +91 9822965257 </a></p>
   </Col>
-  <Col md={4} className="d-flex flex-column align-items-center">
-    <div style={{ backgroundColor: "#FFFFF0" }}><img src={Email} className="h-9 md:h-9 mb-2" alt="Icon Right" /></div>
-    <p style={{ backgroundColor: "#FFFFF0", paddingLeft: "50px", paddingRight: "50px" }}>loremipsum@gmail.com</p>
+  <Col md={4} className="d-flex flex-column align-items-center py-3"  style={{ backgroundColor: "#FFFFF0"}}>
+    <div ><img src={Email} className="h-9 md:h-9 mb-2" alt="Icon Right" /></div>
+    <p style={{ backgroundColor: "#FFFFF0", paddingLeft: "50px", paddingRight: "50px" }}><a href="mailto:subramhnyamgiriswami@gmail.com" className=" hover:text-gray-400 text-lg">subramhnyamgiriswami@gmail.com</a></p>
   </Col>
-  <Col md={4} className="d-flex flex-column align-items-center">
-   <div style={{ backgroundColor: "#FFFFF0" }}><img src={Location} className="h-9 md:h-9 mb-2" alt="Icon Right" /></div>
-    <p style={{ backgroundColor: "#FFFFF0", paddingLeft: "50px", paddingRight: "50px"}}>City, State, Country - 123456</p>
+  <Col md={4} className="d-flex flex-column align-items-center py-3"  style={{ backgroundColor: "#FFFFF0"}}>
+   <div><img src={Location} className="h-9 md:h-9 mb-2" alt="Icon Right" /></div>
+    <p style={{ backgroundColor: "#FFFFF0", paddingLeft: "50px", paddingRight: "50px"}} className='text-lg'>Kasili, Kopargaon, Ahmednagar</p>
   </Col>
 </Row>
 
@@ -37,7 +37,7 @@ export default function GetInTouch() {
             height="100%"
             frameBorder="0"
             style={{ border: 0 }}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345097077!2d144.95373531531596!3d-37.81627974202192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1634027562341!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240184.3879276773!2d74.36077904346487!3d19.844984871807036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc4202a517aacd%3A0x2a96ce02ceb1726a!2sShree%20Saishakti%20Ashrram%20kasli!5e0!3m2!1sen!2sin!4v1738655813053!5m2!1sen!2sin"
             allowFullScreen
           ></iframe>
         </div>
@@ -46,3 +46,5 @@ export default function GetInTouch() {
 
   )
 }
+
+

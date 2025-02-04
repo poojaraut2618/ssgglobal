@@ -10,7 +10,7 @@ const Puja = () => {
     <>
 
     
-      <section className="container mx-auto px-6 py-12 ">
+      <section className="container mx-auto px-6 py-15 ">
         {/* Heading with Icons */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2">

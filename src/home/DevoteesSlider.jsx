@@ -39,7 +39,7 @@ const BlogSlider = () => {
 
   return (
     <Container>
-      <div className="text-center mb-4 mt-8">
+      <div className="text-center  py-15">
         <div className="d-flex align-items-center justify-content-center gap-4">
           <img src={headingIcon} className="h-10 md:h-10 " alt="Icon Left" />{" "}
           {/* Left Icon */}
@@ -75,8 +75,8 @@ const BlogSlider = () => {
                       <Card className="blog-card border-0 text-center" style={{backgroundColor: '#fffff0'}}>
                         <Card.Img variant="top" src={blog.image} alt={blog.name} style={{height: '100px', width: '100px', borderRadius: '50px', margin: 'auto'}}/>
                         <Card.Body>
-                          <Card.Title>{blog.name}</Card.Title>
-                          <Card.Text>
+                          <Card.Title >{blog.name}</Card.Title>
+                          <Card.Text className="text-lg">
                             {blog.description.length > 50
                               ? `${blog.description.substring(0, 50)}...`
                               : blog.description}

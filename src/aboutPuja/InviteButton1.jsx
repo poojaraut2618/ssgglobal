@@ -7,7 +7,7 @@ export default function InviteButton1() {
     alert("Puja Reserved Successfully!");
   };
   return (
-    <div>
+    <div className=''>
          <div
         className="text-center justify-center flex-colomn d-flex gap-3 pt-9 w-100"
         style={{ backgroundColor: "#FFFFF0", padding: "10px" }}

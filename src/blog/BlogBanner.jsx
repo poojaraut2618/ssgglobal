@@ -12,7 +12,7 @@ const Banner = () => {
             {/* Content */}
             <div className="relative container mx-auto py-4  text-white flex">
                 <div className="max-w-full  ">
-                    <h1 className="font-bold text-2xl ml-44 md:text-3xl">
+                    <h1 className="fw-bold text-4xl ml-44 md:text-5xl ">
                     Explore Divine Knowledge and Spiritual Insights                    </h1>
                 </div>
             </div>
