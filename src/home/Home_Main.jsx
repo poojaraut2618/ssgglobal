@@ -9,12 +9,14 @@ import Img4 from './Img4';
 import HomeGetTouch from './HomeGetTouch';
 import BlogSlider from './BlogSlider';
 import DevoteesSlider from './DevoteesSlider';
+import LaunchingTemple from './LaunchingTemple';
 
 const Home_Main = () => {
     return (
         <>
             <Banner/>
             <About_Us/>
+            <LaunchingTemple/>
             <Puja/>
             <DevoteesSlider/>
             <BlogSlider/>

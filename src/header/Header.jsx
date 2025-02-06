@@ -20,8 +20,9 @@ const Navbar = () => {
           <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">About Us</Link></li>
           <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition onClick={() => window.scrollTo(0, 0)}">About Puja</Link></li>
           <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Blog</Link></li>
-          <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Contact</Link></li>
           <li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Gallery</Link></li>
+          <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Contact</Link></li>
+          
         </ul>
         
 
