@@ -4,6 +4,14 @@ import headingIcon from "../assets/icon.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import  { useEffect } from "react";
+import icon1 from "../assets/ph_flower-lotus-light.png";
+import icon2 from "../assets/ph_coins-light.png"
+import icon3 from "../assets/fluent_food-grains-20-regular.png"
+import icon4 from "../assets/emojione-monotone_elephant.png"
+import icon5 from "../assets/Group 25.png"
+import icon6 from "../assets/Group 30.png"
+import icon7 from "../assets/fluent-emoji-high-contrast_open-book.png"
+import icon8 from "../assets/et_flag.png"
 
 const BlessingsGrid = () => {
 
@@ -13,42 +21,42 @@ const BlessingsGrid = () => {
 
   const blessings = [
     {
-      img: "src/assets/ph_flower-lotus-light.png", 
+      img: icon1, 
       title: "Adi Lakshmi:",
       description: "Bestows eternal wealth and spiritual strength.",
     },
     {
-      img: "src/assets/ph_coins-light.png",
+      img: icon2,
       title: "Dhana Lakshmi:",
       description: "Brings financial abundance and prosperity.",
     },
     {
-      img: "src/assets/fluent_food-grains-20-regular.png",
+      img: icon3,
       title: "Dhanya Lakshmi:",
       description: "Blesses agricultural bounty and nourishment.",
     },
     {
-      img: "src/assets/emojione-monotone_elephant.png",
+      img: icon4,
       title: "Gaja Lakshmi:",
       description: "Grants royal power, success, and prestige.",
     },
     {
-      img: "src/assets/Group 25.png",
+      img: icon5,
       title: "Santana Lakshmi:",
       description: "Blesses with offspring and family harmony.",
     },
     {
-      img: "src/assets/Group 30.png",
+      img: icon6,
       title: "Veera Lakshmi:",
       description: "Offers courage, strength, and resilience.",
     },
     {
-      img: "src/assets/fluent-emoji-high-contrast_open-book.png",
+      img: icon7,
       title: "Vidya Lakshmi",
       description: "Embodies knowledge, wisdom, and education.",
     },
     {
-      img: "src/assets/et_flag.png",
+      img: icon8,
       title: "Vijaya Lakshmi:",
       description: "Ensures victory and success in endeavors.",
     },

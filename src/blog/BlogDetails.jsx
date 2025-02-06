@@ -27,7 +27,7 @@ const BlogDetails = () => {
             <Card.Title style={{ fontSize: "25px" }}>{blog.name}</Card.Title>
             <Card.Text className="text-lg">{blog.description}</Card.Text>
 
-            <a href="/blog">
+            {/* <a href="/blog">
               <Button
                 variant="link"
                 className="mt-auto flex d-flex  no-underline"
@@ -36,7 +36,9 @@ const BlogDetails = () => {
                 <FaArrowLeft className="mr-2 mt-1 text-[#800080]" /> Back to
                 Blogs
               </Button>
-            </a>
+            </a> */}
+
+            
           </Card.Body>
         </Card>
       ) : (

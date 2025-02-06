@@ -11,6 +11,7 @@ import Contact from './contact/Contact';
 import Footer from './home/Footer';
 import VolunteerHeader from './header/VolunteerHeader';
 import BlogDetails from './blog/BlogDetails';
+import Gallery from './gallery/Gallery';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about-puja" element={<About_Puja />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
 
       </Routes> 

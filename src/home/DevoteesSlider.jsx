@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Carousel, Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom"; // For linking to the blog details page
-import { FaArrowRight } from "react-icons/fa";
+// import { Link } from "react-router-dom"; 
+// import { FaArrowRight } from "react-icons/fa";
 import headingIcon from "../assets/icon.png";
+import img1 from "../assets/Swami LOgo.png"
 
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([
@@ -10,28 +11,28 @@ const BlogSlider = () => {
       id: 1,
       name: "Spiritual Awakening",
       description: "A guide to spiritual awakening and meditation practices.",
-      image: "https://t4.ftcdn.net/jpg/07/13/93/47/360_F_713934704_N0qax4vxqngR873Z3NlvXL22g84h2taq.jpg",
+      image: img1,
       slug: "spiritual-awakening",
     },
     {
       id: 2,
       name: "Puja and Rituals",
       description: "An introduction to various pujas and their significance.",
-      image: "https://t4.ftcdn.net/jpg/07/13/93/47/360_F_713934704_N0qax4vxqngR873Z3NlvXL22g84h2taq.jpg",
+      image: img1,
       slug: "puja-and-rituals",
     },
     {
       id: 3,
       name: "The Power of Mantras",
       description: "Exploring the power and significance of mantras in daily life.",
-      image: "https://t4.ftcdn.net/jpg/07/13/93/47/360_F_713934704_N0qax4vxqngR873Z3NlvXL22g84h2taq.jpg",
+      image: img1,
       slug: "the-power-of-mantras",
     },
     {
       id: 4,
       name: "Meditation Techniques",
       description: "Different techniques for effective meditation and mindfulness.",
-      image: "https://t4.ftcdn.net/jpg/07/13/93/47/360_F_713934704_N0qax4vxqngR873Z3NlvXL22g84h2taq.jpg",
+      image: img1,
       slug: "meditation-techniques",
     },
     
