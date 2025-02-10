@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import headingIcon from "../assets/icon.png";
 import img1 from "../assets/WhatsApp Image 2025-01-21 at 11.07.58.jpeg";
 import img2 from "../assets/WhatsApp Image 2025-01-21 at 11.08.11.jpeg";
 import img3 from "../assets/WhatsApp Image 2025-01-21 at 11.08.14 (1).jpeg";
@@ -66,9 +67,15 @@ import img73 from "../assets/IMG-20250206-WA0075.jpg";
 import img74 from "../assets/IMG-20250206-WA0076.jpg";
 import img75 from "../assets/IMG-20250206-WA0057.jpg";
 
-const images = [img51, img52, img53, img54, img55, img56, img57, , img59, img61,  img62, img63,img64,img65,img66,img68,img69,img71, img72, img73, img74, img75,img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,  img12, img13,img14,img15,img16,img17,img20,img21,img24,img26,img28,img29,img30,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img44,img45,img46,img47,img48,img49,img50];
 
-const ImageGallery = () => {
+const folders = [
+  { id: 1, name: "Perth", images: [ img52, img53, img54, img55, img56, img57, , img59, img61,  img62, img63,img64,img65,img66,img68,img69,img71, img72, img73, img74, img75]  },
+  
+  { id: 2, name: "Singapore", images: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,  img12, img13,img14,img15,img16,img17,img20,img21,img24,img26,img28,img29,img30,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img44,img45,img46,img47,img48,img49,img50]},
+];
+
+const FolderViewer = () => {
+  const [selectedFolder, setSelectedFolder] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
@@ -76,31 +83,71 @@ const ImageGallery = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        {images.map((image, index) => (
-          <div key={index} className="overflow-hidden rounded-lg">
-            <img
-              data-aos="flip-left"
-              src={image}
-              alt={`Gallery Image ${index + 1}`}
-              className="w-[400px] h-96 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
-              onClick={() => setSelectedImage(image)}
-            />
-          </div>
+    <div className="container p-4 mb-60">
+      <div className="grid grid-cols-4 gap-4 h-44 w-full">
+        {folders.map((folder) => (
+          <button
+            key={folder.id}
+            className="p-4 border rounded-lg shadow-md bg-white hover:bg-gray-100"
+            onClick={() => setSelectedFolder(folder)}
+          >
+            <div className="flex flex-col items-center">
+              {folder.images.length > 0 && (
+                <img
+                  src={folder.images[0]}
+                  alt={folder.name}
+                  className="w-60 h-36 object-cover rounded-md"
+                />
+              )}
+              <span className="primaryColor fw-bold text-xl pt-3">
+                {folder.name}
+              </span>
+              <span className="text-gray-500 text-sm">
+                ({folder.images.length} Photo)
+              </span>
+            </div>
+          </button>
         ))}
       </div>
 
+      {selectedFolder && (
+        <div className="pt-28">
+          <div className="flex items-center justify-center gap-4">
+            <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />
+            <h2 className="text-3xl md:text-4xl fw-bold primaryColor">
+              {selectedFolder.name}
+            </h2>
+            <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-5">
+            {selectedFolder.images.map((image, index) => (
+              <img
+                data-aos="flip-right"
+                key={index}
+                src={image}
+                alt={selectedFolder.name}
+                className="w-[400px] h-96 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
           <div className="relative">
             <button
-              className="absolute top-2 right-2 bg-gray-800 text-white px-3 py-1 rounded-full hover:bg-gray-600"
+              className="absolute top-4 right-4 bg-white p-2 rounded-full text-black text-lg"
               onClick={() => setSelectedImage(null)}
             >
-              &#x2715;
+              &times;
             </button>
-            <img src={selectedImage} alt="Popup" className="max-w-[900px] max-h-screen rounded-lg" />
+            <img
+              src={selectedImage}
+              alt="Selected"
+              className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
+            />
           </div>
         </div>
       )}
@@ -108,4 +155,4 @@ const ImageGallery = () => {
   );
 };
 
-export default ImageGallery;
+export default FolderViewer;

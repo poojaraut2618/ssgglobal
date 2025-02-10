@@ -45,7 +45,7 @@ const Navbar = () => {
           <X size={32} />
         </button>
         <div className="flex flex-col items-center justify-center h-full space-y-6 text-lg font-medium ">
-          <Link to="/" onClick={() => setIsOpen(false)} className="text-white">Home</Link>
+          <Link to="/" onClick={() => setIsOpen(false)}  className="text-white">Home</Link>
           <Link to="/about" onClick={() => setIsOpen(false)} className="text-white">About Us</Link>
           <Link to="/about-puja" onClick={() => setIsOpen(false)} className="text-white">About Puja</Link>
           <Link to="/blog" onClick={() => setIsOpen(false)} className="text-white">Blog</Link>
