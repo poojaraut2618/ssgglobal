@@ -15,13 +15,14 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-10 text-xl mt-3 font-semibold text-gray-800">
+        <ul className="hidden md:flex space-x-8 text-xl mt-3 font-semibold text-gray-800">
           <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Home</Link></li>
           <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">About Us</Link></li>
           <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition onClick={() => window.scrollTo(0, 0)}">About Puja</Link></li>
           <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Blog</Link></li>
           <li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Gallery</Link></li>
           <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Contact</Link></li>
+          <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Donate</Link></li>
           
         </ul>
         
@@ -49,8 +50,10 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setIsOpen(false)} className="text-white">About Us</Link>
           <Link to="/about-puja" onClick={() => setIsOpen(false)} className="text-white">About Puja</Link>
           <Link to="/blog" onClick={() => setIsOpen(false)} className="text-white">Blog</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white">Contact</Link>
           <Link to="/gallery" onClick={() => setIsOpen(false)} className="text-white">Gallery</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white">Contact</Link>
+          <Link to="/donate" onClick={() => setIsOpen(false)} className="text-white">Donate</Link>
+          
           
           
           
