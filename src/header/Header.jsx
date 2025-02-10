@@ -22,7 +22,7 @@ const Navbar = () => {
           <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Blog</Link></li>
           <li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Gallery</Link></li>
           <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Contact</Link></li>
-          <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Donate</Link></li>
+          {/* <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Donate</Link></li> */}
           
         </ul>
         
@@ -52,7 +52,7 @@ const Navbar = () => {
           <Link to="/blog" onClick={() => setIsOpen(false)} className="text-white">Blog</Link>
           <Link to="/gallery" onClick={() => setIsOpen(false)} className="text-white">Gallery</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white">Contact</Link>
-          <Link to="/donate" onClick={() => setIsOpen(false)} className="text-white">Donate</Link>
+          {/* <Link to="/donate" onClick={() => setIsOpen(false)} className="text-white">Donate</Link> */}
           
           
           

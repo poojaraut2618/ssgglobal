@@ -69,9 +69,9 @@ import img74 from "../assets/IMG-20250206-WA0076.jpg";
 import img75 from "../assets/IMG-20250206-WA0057.jpg";
 
 const folders = [
-  { id: 1, name: "Perth", images: [ img52, img53, img54, img55, img56, img57, , img59, img61,  img62, img63,img64,img65,img66,img68,img69,img71, img72, img73, img74, img75] },
+  { id: 1, name: "Perth,Australia", images: [ img52, img53, img54, img55, img56, img57, , img59, img61,  img62, img63,img64,img65,img66,img68,img69,img71, img72, img73, img74, img75] },
   
-  { id: 2, name: "Australia", images: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,  img12, img13,img14,img15,img16,img17,img20,img21,img24,img26,img28,img29,img30,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img44,img45,img46,img47,img48,img49,img50] },
+  { id: 2, name: "Singapore", images: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,  img12, img13,img14,img15,img16,img17,img20,img21,img24,img26,img28,img29,img30,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img44,img45,img46,img47,img48,img49,img50] },
 ];
 
 const FolderViewer = () => {
