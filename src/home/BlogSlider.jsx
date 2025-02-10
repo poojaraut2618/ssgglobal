@@ -1,46 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { Carousel, Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom"; // For linking to the blog details page
+import { Link } from "react-router-dom";
 import headingIcon from "../assets/icon.png";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md"; 
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
 
-  // Fetch blog data from the JSON file
   useEffect(() => {
-    fetch("/Blogs.json") // Path to the JSON file in public folder
-      .then((response) => response.json()) // Parse the JSON response
-      .then((data) => {
-        setBlogs(data); // Update the blogs state with fetched data
-      })
+    fetch("/Blogs.json")
+      .then((response) => response.json())
+      .then((data) => setBlogs(data))
       .catch((error) => console.error("Error fetching blogs:", error));
   }, []);
 
   return (
-    <Container className="py-20">
+    <Container className="py-20 overflow-hidden"> {/* Prevent Overflow */}
       <div className="text-center mb-4 mt-8">
         <div className="d-flex align-items-center justify-content-center gap-4">
-          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />{" "}
-          {/* Left Icon */}
+          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />
           <h2 className="text-3xl md:text-4xl fw-bold primaryColor">
-          Spiritual Insights & Puja Guides
+            Spiritual Insights & Puja Guides
           </h2>
-          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" />{" "}
-          {/* Right Icon */}
+          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" />
         </div>
       </div>
 
       <Carousel
-        interval={5000} // Set interval for slide transition (5 seconds)
-        wrap={true} // Enable infinite loop
-        slide={true} // Enable sliding effect
-        nextIcon={<span className="carousel-control-next-icon" />} // Next icon
-        prevIcon={<span className="carousel-control-prev-icon" />} // Previous icon
-        indicators={false} // Hide indicators
-        controls={true} // Show carousel controls
+        interval={5000}
+        wrap={true}
+        slide={true}
+        nextIcon={<span className="carousel-control-next-icon" />}
+        prevIcon={<span className="carousel-control-prev-icon" />}
+        indicators={false}
+        controls={true}
+        className="overflow-hidden"
       >
-        {/* Loop through blogs and display 3 per slide */}
         {blogs.length > 0 &&
           blogs
             .reduce((acc, blog, index) => {
@@ -49,33 +44,37 @@ const BlogSlider = () => {
             }, [])
             .map((group, index) => (
               <Carousel.Item key={index}>
-                <Row>
+                <Row className="overflow-hidden"> {/* Prevents Row Overflow */}
                   {group.map((blog) => (
                     <Col key={blog.id} md={4}>
-                      <Card className="blog-card border-0">
+                      <Card className="blog-card border-0 overflow-hidden"> {/* Prevents Card Overflow */}
                         <Card.Img
                           variant="top"
                           src={blog.image}
                           alt={blog.name}
+                          style={{ objectFit: "cover", height: "200px" }} // Keeps images contained
                         />
                         <Card.Body>
                           <Card.Title>{blog.name}</Card.Title>
-                          <Card.Text >
+                          <Card.Text>
                             {blog.description.length > 50
                               ? `${blog.description.substring(0, 50)}...`
                               : blog.description}
                           </Card.Text>
                           <div className="text-right">
-                          <Link to={`/blog/${blog.slug}`}>
-  <Button 
-    variant="link" 
-    className="mt-auto flex d-flex Blog no-underline"
-    style={{ color: 'orange', textDecoration: 'none' }}
-  >
-    Read More <MdKeyboardDoubleArrowRight className="ml-2 text-[#800080] text-2xl" />
-  </Button>
-</Link>
-
+                            <Link to={`/blog/${blog.slug}`}>
+                              <Button
+                                variant="link"
+                                className="mt-auto d-flex align-items-center"
+                                style={{
+                                  color: "orange",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                Read More{" "}
+                                <MdKeyboardDoubleArrowRight className="ml-2 text-[#800080] text-2xl" />
+                              </Button>
+                            </Link>
                           </div>
                         </Card.Body>
                       </Card>

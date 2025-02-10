@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Carousel, Container, Row, Col, Card, Button } from "react-bootstrap";
-// import { Link } from "react-router-dom"; 
-// import { FaArrowRight } from "react-icons/fa";
+import React, { useState } from "react";
+import { Carousel, Container, Row, Col, Card } from "react-bootstrap";
 import headingIcon from "../assets/icon.png";
-import img1 from "../assets/Swami LOgo.png"
+import img1 from "../assets/Swami LOgo.png";
 
 const BlogSlider = () => {
-  const [blogs, setBlogs] = useState([
+  const [blogs] = useState([
     {
       id: 1,
       name: "Spiritual Awakening",
@@ -35,64 +33,74 @@ const BlogSlider = () => {
       image: img1,
       slug: "meditation-techniques",
     },
-    
   ]);
 
   return (
     <Container>
-      <div className="text-center  py-15">
+      <div className="text-center py-15">
         <div className="d-flex align-items-center justify-content-center gap-4">
-          <img src={headingIcon} className="h-10 md:h-10 " alt="Icon Left" />{" "}
-          {/* Left Icon */}
+          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />
           <h2 className="text-3xl md:text-4xl fw-bold primaryColor">
-          What Our Devotees Say
+            What Our Devotees Say
           </h2>
-          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" />{" "}
-          {/* Right Icon */}
+          <img src={headingIcon} className="h-10 md:h-10" alt="Icon Right" />
         </div>
       </div>
 
-      <Carousel
-        interval={3000} // Set interval for slide transition (3 seconds)
-        wrap={true} // Enable infinite loop
-        slide={true} // Enable sliding effect
-        nextIcon={<span className="carousel-control-next-icon" />} // Next icon
-        prevIcon={<span className="carousel-control-prev-icon" />} // Previous icon
-        indicators={false} // Hide indicators
-        controls={true} // Show carousel controls
-      >
-        {/* Loop through blogs and display 2 per slide */}
-        {blogs.length > 0 &&
-          blogs
-            .reduce((acc, blog, index) => {
-              if (index % 2 === 0) acc.push(blogs.slice(index, index + 2)); // 2 blogs per slide
-              return acc;
-            }, [])
-            .map((group, index) => (
-              <Carousel.Item key={index}>
-                <Row>
-                  {group.map((blog) => (
-                    <Col key={blog.id} md={6}>
-                      <Card className="blog-card border-0 text-center" style={{backgroundColor: '#fffff0'}}>
-                        <Card.Img variant="top" src={blog.image} alt={blog.name} style={{height: '100px', width: '100px', borderRadius: '50px', margin: 'auto'}}/>
-                        <Card.Body>
-                          <Card.Title >{blog.name}</Card.Title>
-                          <Card.Text className="text-lg">
-                            {blog.description.length > 50
-                              ? `${blog.description.substring(0, 50)}...`
-                              : blog.description}
-                          </Card.Text>
-                          <div className="text-right">
+      <div className="carousel-container">
+        <Carousel
+          interval={3000}
+          wrap={true}
+          slide={true}
+          
+        >
+          {blogs.length > 0 &&
+            blogs
+              .reduce((acc, blog, index) => {
+                if (index % 2 === 0) acc.push(blogs.slice(index, index + 2));
+                return acc;
+              }, [])
+              .map((group, index) => (
+                <Carousel.Item key={index}>
+                  <Row>
+                    {group.map((blog) => (
+                      <Col key={blog.id} md={6}>
+                        <Card className="blog-card border-0 text-center" style={{ backgroundColor: "#fffff0" }}>
+                          <Card.Img
+                            variant="top"
+                            src={blog.image}
+                            alt={blog.name}
+                            style={{
+                              height: "100px",
+                              width: "100px",
+                              borderRadius: "50px",
+                              margin: "auto",
+                            }}
+                          />
+                          <Card.Body>
+                            <Card.Title>{blog.name}</Card.Title>
+                            <Card.Text className="text-lg">
+                              {blog.description.length > 50
+                                ? `${blog.description.substring(0, 50)}...`
+                                : blog.description}
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    ))}
+                  </Row>
+                </Carousel.Item>
+              ))}
+        </Carousel>
+      </div>
 
-                          </div>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  ))}
-                </Row>
-              </Carousel.Item>
-            ))}
-      </Carousel>
+      {/* Additional CSS */}
+      <style jsx>{`
+        .carousel-container {
+          overflow: hidden; /* Hide overflow */
+          position: relative;
+        }
+      `}</style>
     </Container>
   );
 };
