@@ -6,7 +6,7 @@ export default function InviteButton() {
     alert("Puja Reserved Successfully!");
   };
   return (
-    <div>
+    <div > 
          {/* Button */}
       <div
         className="text-center justify-center flex-colomn d-flex gap-3 pt-9 w-100"

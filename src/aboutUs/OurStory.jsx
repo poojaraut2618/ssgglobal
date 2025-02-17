@@ -10,7 +10,7 @@ const Puja = () => {
     <>
 
     
-      <section className="container mx-auto px-6 py-15 ">
+      <section className="container mx-auto px-6 py-12 ">
         {/* Heading with Icons */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2">
@@ -30,7 +30,7 @@ const Puja = () => {
           </div>
   
           {/* Right Column - Content */}
-          <div className="w-100 w-md-50 mb-36 ml-9">
+          <div className="  col-12 col-md-6 mt-4 mt-md-0">
             <p className="text-lg text-dark">
             Founded with the vision of preserving ancient Vedic traditions, SSG Global is dedicated to spreading the light of spirituality and devotion. Our expertise lies in performing the sacred Ashtalakshmi Puja, a powerful ritual that invokes the blessings of the eight forms of Goddess Lakshmi.
             </p>

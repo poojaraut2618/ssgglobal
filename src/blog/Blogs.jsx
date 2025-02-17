@@ -23,11 +23,11 @@ const Blogs = () => {
 
   return (
     <>
-      <Container className="mt-5">
+      <Container className="pt-12">
         <Row>
           {blogs.map((blog) => (
             <Col md={4} key={blog.id} className="mb-5 ">
-              <Card className="d-flex flex-column  border-0" style={{ backgroundColor: "#FFFFF0" }}>
+              <Card className="d-flex flex-column  border-0" style={{ backgroundColor: "#FFFFF0", height: "500px" }}>
                 <Card.Img variant="top" src={blog.image} alt={blog.name}/>
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{blog.name}</Card.Title>
@@ -51,8 +51,6 @@ const Blogs = () => {
     Read More <MdKeyboardDoubleArrowRight className="ml-2 text-[#800080] text-2xl" />
   </Button>
 </Link>
-
-
                  
 
                 </Card.Body>

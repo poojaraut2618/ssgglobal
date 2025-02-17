@@ -19,7 +19,7 @@ const BlogDetails = () => {
   }, [slug]);
 
   return (
-    <Container className="py-10">
+    <Container className="py-12">
       {blog ? (
         <Card className="border-0">
           <Card.Img variant="top" src={blog.image} alt={blog.name} />

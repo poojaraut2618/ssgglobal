@@ -37,7 +37,7 @@ const BlogSlider = () => {
 
   return (
     <Container>
-      <div className="text-center py-15">
+      <div className="container text-center py-12">
         <div className="d-flex align-items-center justify-content-center gap-4">
           <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />
           <h2 className="text-3xl md:text-4xl fw-bold primaryColor">

@@ -6,16 +6,16 @@ import ImageSlider from './ImageSlider';
 const LaunchingTemple = () => {
     return (
         <>
-        <section className="container">
+        <section className="container py-12">
         <div className="flex items-center justify-center gap-4">
           <img src={headingIcon} className="h-16" /> {/* Left Icon */}
           <h2 className="fw-bold text-3xl primaryColor text-center  font-heading">Saishakti Sant Ashram Kasili, Kopergaon</h2>
           <img src={headingIcon} className="h-16" /> {/* Right Icon */}
         </div>
         </section>
-        <div className="launching-temple-container">
+        <div className="launching-temple-container py-5">
             <div className="launching-temple-content">
-                <div className="text-section">
+                <div className="text-section ">
                 
         <h4 className="fw-bold text-md primaryColor"> Opening the doors to a spiritual journey....</h4>
                     <p className="description">

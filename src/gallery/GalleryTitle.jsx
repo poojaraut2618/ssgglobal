@@ -3,7 +3,7 @@ import headingIcon from "../assets/icon.png";
 
 export default function GalleryTitle() {
   return (
-    <div className='py-15'>
+    <div className='py-12'>
          <div className="text-center">
                 <div className="flex items-center justify-center gap-4">
                   <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />

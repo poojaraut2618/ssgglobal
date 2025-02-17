@@ -6,7 +6,7 @@ import Email from "../assets/email.png"
 import Location from "../assets/location.png"
 export default function GetInTouch() {
   return (
-    <Container className="mt-5">
+    <Container className="">
       <Card className="text-center p-4 "  style={{ border: "0"}}>
       <div className="text-center mb-4 mt-8">
                 <div className="d-flex align-items-center justify-content-center gap-4">

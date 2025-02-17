@@ -4,7 +4,7 @@ import bannerImage from "../assets/About-pujaBanner.png";
 const Banner = () => {
     return (
         <div
-            className="relative bg-cover bg-center h-[450px] flex items-center"
+            className=" relative bg-cover bg-center h-[450px] flex items-center"
             style={{
                 backgroundImage: `url(${bannerImage})`,
             }}

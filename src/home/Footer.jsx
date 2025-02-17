@@ -30,16 +30,16 @@ const Footer = () => {
           </div>  
 
           {/* Left Section - Text */}
-          <div className="text-start mr-9 lg:text-left mt-7">
+          <div className="text-start mr-9 lg:text-left mt-2">
             <p className="text-base">
             Our expertise lies in performing the sacred Ashtalakshmi Puja, a powerful ritual that invokes the blessings of the eight forms of Goddess Lakshmi.  
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-1">Quick Links</h3>
-            <ul className="space-y-2 text-left">
+          <div  >
+            <h3 className="text-lg font-semibold mb-2 mt-2">Quick Links</h3>
+            <ul className="space-y-1 text-start -ml-6">
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Home</Link></li>
 <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Us</Link></li>
 <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Puja</Link></li>
@@ -51,7 +51,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-1">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-1 mt-2">Contact Us</h3>
             
             <p className="flex items-center space-x-2"><span><IoCallOutline /> </span> <a href="tel:+91 9923607845" className="text-white hover:text-gray-400">+91 9923607845 <br/> +91 9822965257 </a></p>
             <p className="flex items-center space-x-2"><span><CiMail /></span> <a href="mailto:subramhnyamgiriswami@gmail.com" className="text-white hover:text-gray-400">subramhnyamgiriswami@gmail.com</a>

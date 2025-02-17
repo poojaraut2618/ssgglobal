@@ -83,29 +83,32 @@ const FolderViewer = () => {
   }, []);
 
   return (
-    <div className="container p-4 mb-20">
-      {/* Folder Selection */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {folders.map((folder) => (
-          <button
-            key={folder.id}
-            className="p-3 border rounded-lg shadow-md bg-white hover:bg-gray-100"
-            onClick={() => setSelectedFolder(folder)}
-          >
-            <div className="flex flex-col items-center">
-              {folder.images.length > 0 && (
-                <img
-                  src={folder.images[0]}
-                  alt={folder.name}
-                  className="w-full h-32 sm:h-40 object-cover rounded-md"
-                />
-              )}
-              <span className="text-lg font-semibold pt-2">{folder.name}</span>
-              <span className="text-gray-500 text-sm">({folder.images.length} Photos)</span>
-            </div>
-          </button>
-        ))}
-      </div>
+    <div className="py-3">
+    <div className="flex flex-col items-center ">
+  {/* Folder Selection */}
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-4 w-[500px]">
+    {folders.map((folder) => (
+      <button
+        key={folder.id}
+        className="p-3 border rounded-lg shadow-md bg-white hover:bg-gray-100"
+        onClick={() => setSelectedFolder(folder)}
+      >
+        <div className="flex flex-col items-center">
+          {folder.images.length > 0 && (
+            <img
+              src={folder.images[0]}
+              alt={folder.name}
+              className="w-full h-32 sm:h-40 object-cover rounded-md"
+            />
+          )}
+          <span className="text-lg font-semibold pt-2">{folder.name}</span>
+          <span className="text-gray-500 text-sm">({folder.images.length} Photos)</span>
+        </div>
+      </button>
+    ))}
+  </div>
+</div>
+
 
       {/* Folder Images */}
       {selectedFolder && (

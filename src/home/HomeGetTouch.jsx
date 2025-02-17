@@ -6,7 +6,7 @@ import Location from "../assets/location.png";
 
 export default function ContactUs() {
   return (
-    <div className="py-10 px-4 md:px-8 lg:px-16">
+    <div className="container pt-8 px-4 md:px-8 lg:px-16">
       {/* Heading Section */}
        <div className="text-center mb-8">
                 <div className="flex items-center justify-center gap-4">

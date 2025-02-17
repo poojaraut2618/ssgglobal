@@ -4,7 +4,7 @@ import headingIcon from "../assets/icon.png";
 
 export default function Form() {
   return (
-    <Container id="ReserveForm">
+    <Container id="ReserveForm" className="-mt-16">
       <Card style={{border: "0"}}>
         <div className="text-center mb-4 mt-8">
           <div className="d-flex align-items-center justify-content-center gap-4">

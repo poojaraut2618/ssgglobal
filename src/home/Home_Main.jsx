@@ -5,7 +5,7 @@ import Puja from './Puja';
 // import Testimonials from './Testimonials';
 import './Home_Main.css';
 import Form from '../Contact/Form';
-import Img4 from './Img4';
+// import Img4 from './Img4';
 import HomeGetTouch from './HomeGetTouch';
 import BlogSlider from './BlogSlider';
 import DevoteesSlider from './DevoteesSlider';
@@ -21,7 +21,7 @@ const Home_Main = () => {
             <DevoteesSlider/>
             <BlogSlider/>
             <Form/>
-            <Img4/>
+            {/* <Img4/> */}
             <HomeGetTouch/>
         </>
     )

@@ -3,8 +3,9 @@ import OurStory from './OurStory'
 import AboutUsBanner from './AboutUsBanner'
 import MissionVision from './MissionVision'
 import WhySSG from './WhySSG'
-import Img4 from '../home/Img4'
+// import Img4 from '../home/Img4'
 import InviteButton from './InviteButton'
+import TrusteeTable from './TrusteeTable'
 
 export default function About_Us() {
   return (
@@ -13,7 +14,8 @@ export default function About_Us() {
         <OurStory/>
         <MissionVision/>
         <WhySSG/>
-        <Img4/>
+        <TrusteeTable/>
+        {/* <Img4/> */}
         <InviteButton/>
     </div>
   )

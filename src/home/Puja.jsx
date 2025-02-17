@@ -7,7 +7,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const Puja = () => {
   return (
     <>
-      <section className="container mx-auto px-6 py-15">
+      <section className="container mx-auto px-6 py-10">
         {/* Heading with Icons */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-4">
@@ -32,19 +32,19 @@ const Puja = () => {
             </p>
             
             <Container>
-            <p className="text-lg primaryColor font-bold"> Eight Forms of Lakshmi :</p>
-      <ListGroup as="ol" numbered>
+            <p className="text-2xl -ml-3 primaryColor font-bold"> Eight Forms of Lakshmi :</p>
+      <ListGroup as="ol" >
         <ListGroup.Item as="li" className="border-0">
-          <strong className='text-xl'>Adi Lakshmi</strong> <span className='text-lg'> – The primal energy, representing eternal wealth and strength.</span>
+          <strong className='text-xl primaryColor'>1  - Adi Lakshmi</strong> <span className='text-lg'> – The primal energy, representing eternal wealth and strength.</span>
         </ListGroup.Item>
         <ListGroup.Item as="li" className="border-0">
-          <strong className='text-xl'>Dhana Lakshmi</strong> <span className='text-lg'> – The goddess of material wealth and financial stability.</span>
+          <strong className='text-xl primaryColor'>2 - Dhana Lakshmi</strong> <span className='text-lg'> – The goddess of material wealth and financial stability.</span>
         </ListGroup.Item>
         <ListGroup.Item as="li" className="border-0">
-          <strong className='text-xl'>Dhanya Lakshmi</strong> <span className='text-lg'> – The harbinger of agricultural prosperity and nourishment.</span>
+          <strong className='text-xl primaryColor'>3 - Dhanya Lakshmi</strong> <span className='text-lg'> – The harbinger of agricultural prosperity and nourishment.</span>
         </ListGroup.Item>
         <ListGroup.Item as="li" className="border-0">
-          <strong className='text-xl'>Gaja Lakshmi</strong> <span className='text-lg'> – The symbol of royalty, power, and grandeur.</span>
+          <strong className='text-xl primaryColor'>4 - Gaja Lakshmi</strong> <span className='text-lg'> – The symbol of royalty, power, and grandeur.</span>
         </ListGroup.Item>
       </ListGroup>
     </Container>

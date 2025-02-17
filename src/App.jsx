@@ -12,7 +12,7 @@ import Footer from './home/Footer';
 import VolunteerHeader from './header/VolunteerHeader';
 import BlogDetails from './blog/BlogDetails';
 import Gallery from './gallery/Gallery';
-// import Donate from './donate/Donate';
+import Donate from './donate/Donate';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/donate" element={<Donate />} /> */}
+        <Route path="/donate" element={<Donate />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
 
       </Routes> 

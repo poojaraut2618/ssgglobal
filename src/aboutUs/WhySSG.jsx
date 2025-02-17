@@ -2,14 +2,14 @@ import React from "react";
 import headingIcon from "../assets/icon.png"; 
 export default function WhySSGGlobal() {
     return (
-      <div className="max-w-3xl mx-auto py-20 pb-10 bg-white ">
-        <div className="text-center mb-8">
-                     <div className="flex items-center justify-center gap-2">
-                       <img src={headingIcon} className="h-10" /> {/* Left Icon */}
-                       <h2 className="fw-bold text-4xl primaryColor font-heading">Why SSG Global?</h2>
-                       <img src={headingIcon} className="h-10" /> {/* Right Icon */}
-                     </div>
-                   </div>
+      <div className="max-w-3xl mx-auto py-12 pb-10 bg-white ">
+          <div className="text-center mb-8">
+                      <div className="flex items-center justify-center gap-2">
+                        <img src={headingIcon} className="h-10" /> {/* Left Icon */}
+                        <h2 className="fw-bold text-4xl primaryColor font-heading">Why SSG Global?</h2>
+                        <img src={headingIcon} className="h-10" /> {/* Right Icon */}
+                      </div>
+                    </div>
        
         <ul className="mt-4 space-y-4 text-gray-700 ">
           <li className="flex items-start gap-2">
