@@ -13,6 +13,7 @@ import VolunteerHeader from './header/VolunteerHeader';
 import BlogDetails from './blog/BlogDetails';
 import Gallery from './gallery/Gallery';
 import Donate from './donate/Donate';
+import About_Swamiji from './aboutSwamiji/About_Swamiji';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <Routes>
 
     <Route path="/" element={<Home_Main/>} />
+    <Route path="/about-swamiji" element={<About_Swamiji />} />
         <Route path="/about" element={<About_Us />} />
         <Route path="/about-puja" element={<About_Puja />} />
         <Route path="/blog" element={<Blog />} />

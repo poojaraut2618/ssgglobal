@@ -27,7 +27,7 @@ const contacts = [
 const ContactTable = () => {
   return (
     <div className="container mx-auto py-12">
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 bor">
         <div className="flex items-center justify-center gap-2">
           <img src={headingIcon} className="h-10" alt="icon" />
           <h2 className="fw-bold text-4xl primaryColor font-heading">
@@ -38,7 +38,7 @@ const ContactTable = () => {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border shadow-md rounded-lg overflow-hidden border-gray-300">
+        <table className="w-full border-2  shadow-md rounded-lg overflow-hidden border-gray-300">
           <thead>
             <tr className="bg-[#800080] text-white">
               <th className="border border-gray-300 px-4 py-2">Location</th>

@@ -10,15 +10,19 @@ import HomeGetTouch from './HomeGetTouch';
 import BlogSlider from './BlogSlider';
 import DevoteesSlider from './DevoteesSlider';
 import LaunchingTemple from './LaunchingTemple';
+import Animated4img from './Animated4img';
+import SwamijiEvents from './SwamijiEvents';
 
 const Home_Main = () => {
     return (
         <>
             <Banner/>
             <About_Us/>
+            <Animated4img/>
             <LaunchingTemple/>
             <Puja/>
             <DevoteesSlider/>
+            <SwamijiEvents/>
             <BlogSlider/>
             <Form/>
             {/* <Img4/> */}

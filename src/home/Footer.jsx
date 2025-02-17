@@ -11,6 +11,8 @@ import { FaFacebook } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import  { useEffect } from "react";
+import logo1 from '../assets/SSG-Logo.mp4';
+
 
 const Footer = () => {
 
@@ -26,7 +28,13 @@ const Footer = () => {
           
           {/* Left Section - Logo */}
           <div className="text-center lg:text-left mt-3">
-            <img data-aos="flip-down" src={logo} alt="Logo" className="h-44" />
+             {/* Logo */}
+                    <Link to="/" className="flex items-center space-x-2">
+              <video src={logo1} alt="Logo1" className="h-44 w-auto" autoPlay loop muted>
+                
+              </video>
+            </Link>
+            
           </div>  
 
           {/* Left Section - Text */}
