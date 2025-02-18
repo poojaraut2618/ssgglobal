@@ -38,7 +38,7 @@ a{
 }
 .primary-btn:hover {
   background-color: orange;
-  border: 1px orange;
+  border: 1px #ffa500;
 }
 
 input
