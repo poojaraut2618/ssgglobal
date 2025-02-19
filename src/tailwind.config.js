@@ -5,7 +5,11 @@ export default {
       "./src/**/*.{js,ts,jsx,tsx}",  // Ensures Tailwind scans your React components
     ],
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+          primarycolor:"#800080"
+        }
+      },
     },
     plugins: [],
   };

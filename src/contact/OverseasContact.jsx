@@ -40,7 +40,7 @@ const ContactTable = () => {
       <div className="overflow-x-auto">
         <table className="w-full border-2 shadow-md rounded-lg overflow-hidden border-gray-300 table-auto">
           <thead>
-            <tr className="bg-[#800080] text-white text-sm md:text-base">
+            <tr className="bg-[#800080] text-white text-sm md:text-xl">
               <th className="border border-gray-300 px-2 py-2 sm:px-4">Location</th>
               <th className="border border-gray-300 px-2 py-2 sm:px-4">Name</th>
               <th className="border border-gray-300 px-2 py-2 sm:px-4">Phone</th>

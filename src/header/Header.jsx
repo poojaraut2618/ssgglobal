@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center py-">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2 -ml-7">
   <video src={logo} alt="Logo" className="h-20 w-auto" autoPlay loop muted>
     
   </video>
@@ -18,23 +18,23 @@ const Navbar = () => {
 
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-xl mt-3 mr-2 font-semibold text-gray-800">
-          <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition"></Link></li>
-          <li><Link to="/about-swamiji" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">About Swamiji</Link></li>
-          <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">About Us</Link></li>
-          <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition onClick={() => window.scrollTo(0, 0)}">Ashtalakshmi  Puja</Link></li>
-          <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Blog</Link></li>
-          <li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Gallery</Link></li>
-          <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Donate</Link></li>
-          <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-purple-600 transition">Contact</Link></li>
+        <ul className=" hidden md:flex space-x-6 text-xl mt-3 mr-13 font-semibold " >
+          <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="  transition "></Link></li>
+          <li><Link to="/about-swamiji" onClick={() => window.scrollTo(0, 0)} className="transition headercolor ">About Swamiji</Link></li>
+          <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">About Us</Link></li>
+          <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)} className="transition headercolor " >Ashtalakshmi  Puja</Link></li>
+          <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Blog</Link></li>
+          <li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Gallery</Link></li>
+          <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Donate</Link></li>
+          <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Contact</Link></li>
           
           
         </ul>
         
 
         {/* CTA Button (Hidden on Mobile) */}
-        <div className="hidden md:block -mr-12">
-          <a href="#ReserveForm" className="bg-[#800080] text-white px-3 py-2 rounded-full font-semibold hover:bg-yellow-600 transition">
+        <div className="hidden md:block -mr-5">
+          <a href="#ReserveForm" className="bg-[#800080] text-white px-3 py-2 rounded-full font-semibold hover:bg-yellow-600 transition ">
             Reserve Your Puja
           </a>
         </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-[#800080] text-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`}>
+      <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-[#800080] text-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"} transition -transform duration-300 ease-in-out`}>
         <button className="absolute top-5 right-6" onClick={() => setIsOpen(false)}>
           <X size={32} />
         </button>

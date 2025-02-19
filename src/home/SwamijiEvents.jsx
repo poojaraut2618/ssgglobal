@@ -13,7 +13,7 @@ export default function SeeOurProducts() {
   const activeImage = links.find((link) => link.name === activeLink)?.image;
 
   return (
-    <div className="min-h-screen flex flex-col items-center py-16">
+    <div className="min-h-screen flex flex-col items-center pt-16">
 
        {/* Heading with Icons */}
             
@@ -50,7 +50,7 @@ export default function SeeOurProducts() {
           <img
             src={activeImage}
             alt={activeLink}
-            className="w-96 h-80 object-cover rounded-lg shadow-lg"
+            className="md:w-[210vh] w-96 h-80 object-cover rounded-lg shadow-lg"
           />
         </div>
       )}

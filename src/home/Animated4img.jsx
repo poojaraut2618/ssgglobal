@@ -22,20 +22,26 @@ export default function ImageHoverEffect() {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
+          {/* Image with slight blur on hover */}
           <img
             src={item.src}
             alt={`Image ${index + 1}`}
-            className="h-full w-full object-cover transition-all duration-500"
+            className={`h-full w-full object-cover transition-all duration-500 ${
+              hoveredIndex === index ? "scale-105 blur-sm" : "scale-100 blur-0"
+            }`}
           />
 
+          {/* Overlay stays visible */}
           <div
-            className={`absolute inset-0 ${item.color} flex flex-col justify-center items-center transition-opacity duration-500 ${hoveredIndex === index ? "opacity-0" : "opacity-80"}`}
+            className={`absolute inset-0 ${item.color} flex flex-col justify-center items-center transition-all duration-500 ${
+              hoveredIndex === index ? "opacity-100" : "opacity-80"
+            }`}
           >
             <h2 className="text-white text-2xl font-bold">{item.text}</h2>
             <Link to={item.link}>
               <button
                 onClick={() => window.scrollTo(0, 0)}
-                className="mt-4 primary-btn font-bold py-2 px-6 transition-opacity duration-300 opacity-100 translate-y-0"
+                className="mt-4 bg-white text-black font-bold py-2 px-6 rounded-md shadow-lg hover:bg-gray-200 transition duration-300"
               >
                 Know More
               </button>

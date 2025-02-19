@@ -21,7 +21,7 @@ p, li, a{
 }
 
 .primaryColor{
-  color: #800080;
+  color: #800080 !important;
 }
 
 a{
@@ -97,3 +97,9 @@ input
 {
   font-size: 30px !important;
 }
+
+
+.headercolor:hover{
+  color: #800080 !important;
+}
+

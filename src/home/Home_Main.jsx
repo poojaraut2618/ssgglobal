@@ -10,7 +10,7 @@ import HomeGetTouch from './HomeGetTouch';
 import BlogSlider from './BlogSlider';
 import DevoteesSlider from './DevoteesSlider';
 import LaunchingTemple from './LaunchingTemple';
-import Animated4img from './Animated4img';
+// import Animated4img from './Animated4img';
 import SwamijiEvents from './SwamijiEvents';
 
 const Home_Main = () => {
@@ -18,7 +18,7 @@ const Home_Main = () => {
         <>
             <Banner/>
             <About_Us/>
-            <Animated4img/>
+            {/* <Animated4img/> */}
             <LaunchingTemple/>
             <Puja/>
             <DevoteesSlider/>

@@ -24,10 +24,19 @@ const Puja = () => {
         <Container >
         <div className="d-flex flex-column flex-md-row align-items-center gap-4">
           {/* Left Column - Image */}
-          <div className="w-100 w-md-50 grid grid-cols-2">
-            <Image src={aboutImg3} alt="Puja" className="w-100 h-[300px] rounded shadow-md" />
-            <Image src={aboutImg2} alt="Puja" className="w-100 h-[300px] rounded shadow-md mt-64 mr-" />
-          </div>
+          <div className="w-100 w-md-50 grid grid-cols-2 rounded relative">
+  <Image
+    src={aboutImg3}
+    alt="Puja"
+    className="w-96 h-[300px] rounded mb-44 transition-transform duration-300 hover:scale-120"
+  />
+  <Image
+    src={aboutImg2}
+    alt="Puja"
+    className="absolute w- h-[300px] rounded mt-44 ml-44 transition-transform duration-300 hover:scale-120"
+  />
+</div>
+
   
           {/* Right Column - Content */}
           <div className="  col-12 col-md-6 mt-4 mt-md-0">
