@@ -113,3 +113,11 @@ input
 {
   border-bottom: rgb(225, 221, 221) solid;
  }
+
+ .Banner
+ {
+  height: 86vh;
+  max-width: 100%;
+  background-size: cover;
+
+ }

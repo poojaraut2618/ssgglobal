@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <>
             <div
-      className="relative bg-cover bg-center h-[95vh] flex items-center "
+      className="relative bg-cover bg-center Banner flex items-center "
       style={{
         backgroundImage: `url(${bannerImage})`, // Replace with your image path
       }}

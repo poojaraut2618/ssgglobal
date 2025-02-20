@@ -28,12 +28,12 @@ const Puja = () => {
   <Image
     src={aboutImg3}
     alt="Puja"
-    className="w-96 md:h-[60vh] ml-10 rounded mb-44 transition-transform duration-300 hover:scale-120"
+    className="w-96 h-[30vh] lg:h-[60vh] rounded mb-44 transition-transform duration-300 hover:scale-110"
   />
   <Image
     src={aboutImg2}
     alt="Puja"
-    className="absolute  md:h-[60vh] rounded md:mt-44 md:ml-44 h-56 mt-36 ml-36 transition-transform duration-300 hover:scale-120"
+    className="absolute w-52 h-[30vh] lg:h-[60vh] lg:w-72 rounded mt-44 ml-36 transition-transform duration-300 hover:scale-110"
   />
 </div>
 
