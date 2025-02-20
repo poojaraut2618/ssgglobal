@@ -7,10 +7,11 @@ import OverseasContact from './OverseasContact'
 export default function Contact() {
   return (
     <div>
-      <ContactBanner/>  
-        <GetInTouch/>
-        <Form/>
-        <OverseasContact/>
+      <ContactBanner/> 
+      <OverseasContact/> 
+      <Form/>
+      <GetInTouch/>       
+        
     </div>
   )
 }

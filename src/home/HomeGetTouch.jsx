@@ -8,21 +8,23 @@ export default function ContactUs() {
   return (
     <div className="container pt-8 px-4 md:px-8 lg:px-16">
       {/* Heading Section */}
-       <div className="text-center mb-8">
-                <div className="flex items-center justify-center gap-4">
-                  <img src={headingIcon} className="h-10" /> {/* Left Icon */}
-                  <h2 className="fw-bold text-4xl primaryColor font-heading">Get In Touch</h2>
-                  <img src={headingIcon} className="h-10" /> {/* Right Icon */}
-                </div>
-              </div>
+      <div className="text-center mb-8">
+        <div className="flex items-center justify-center gap-4">
+          <img src={headingIcon} className="h-10" alt="Heading Icon" />
+          <h2 className="fw-bold text-3xl md:text-4xl primaryColor font-heading">
+            Get In Touch
+          </h2>
+          <img src={headingIcon} className="h-10" alt="Heading Icon" />
+        </div>
+      </div>
 
       {/* Contact Container */}
-      <div className="max-w-6xl mx-auto  p-6 md:p-10 flex flex-col md:flex-row gap-10 md:gap-20 ">
+      <div className="max-w-6xl mx-auto p-6 md:p-8 flex flex-col md:flex-row gap-10 md:gap-20">
         {/* Map Section */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-2/2 md:-ml-14">
           <iframe
             title="Google Map"
-            className="w-full h-60 md:h-80 lg:h-96 rounded-lg"
+            className="w-full h-64 md:h-96 lg:h-96 rounded-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240184.3879276773!2d74.36077904346487!3d19.844984871807036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc4202a517aacd%3A0x2a96ce02ceb1726a!2sShree%20Saishakti%20Ashrram%20kasli!5e0!3m2!1sen!2sin!4v1738655813053!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"

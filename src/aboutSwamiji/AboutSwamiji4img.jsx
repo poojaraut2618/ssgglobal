@@ -16,11 +16,11 @@ export default function Img4() {
 
   return (
     <div>
-        <div className="flex flex-wrap justify-center gap-5  py-20">
-                    <img data-aos="flip-left"  src={aboutImg1} alt="About 1" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
-                    <img data-aos="flip-left"  src={aboutImg3} alt="About 2" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
-                    <img data-aos="flip-left"  src={aboutImg4} alt="About 3" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
-                    <img data-aos="flip-right"  src={aboutImg2} alt="About 4" className="w-full sm:w-1/2 md:w-1/5 rounded-lg shadow-lg" />
+        <div className="flex flex-wrap justify-center gap-3  py-20">
+                    <img data-aos="flip-left"  src={aboutImg1} alt="About 1" className="w-full sm:w-1/2 md:w-72 md:h-96 rounded-lg shadow-lg " />
+                    <img data-aos="flip-left"  src={aboutImg3} alt="About 2" className="w-full sm:w-1/2 md:w-72 md:h-96 rounded-lg shadow-lg" />
+                    <img data-aos="flip-left"  src={aboutImg4} alt="About 3" className="w-full sm:w-1/2 md:w-72 md:h-96 rounded-lg shadow-lg" />
+                    <img data-aos="flip-right"  src={aboutImg2} alt="About 4" className="w-full sm:w-1/2 md:w-72 md:h-96 rounded-lg shadow-lg" />
                   </div>
     </div>
   )

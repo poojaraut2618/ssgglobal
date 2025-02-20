@@ -7,7 +7,7 @@ export default function SeeOurProducts() {
   const links = [
     { name: "Past Events", image: "/images/marigold.jpg" },
     { name: "Ongoing Events", image: "/images/chrysanthemum.jpg" },
-    { name: "Upcoming Events", image: "/images/watermelon.jpg" },
+    { name: "Upcoming Events", image: "/src/assets/EventUpcoming.jpg" },
   ];
 
   const activeImage = links.find((link) => link.name === activeLink)?.image;
@@ -50,7 +50,7 @@ export default function SeeOurProducts() {
           <img
             src={activeImage}
             alt={activeLink}
-            className="md:w-[210vh] w-96 h-80 object-cover rounded-lg shadow-lg"
+            className="md:w-[210vh] w-96 h- object-cover rounded-lg shadow-lg"
           />
         </div>
       )}

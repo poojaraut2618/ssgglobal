@@ -103,3 +103,13 @@ input
   color: #800080 !important;
 }
 
+.TableText
+{
+  font-weight: bold;
+  font-size: large;
+}
+
+.Border
+{
+  border-bottom: rgb(225, 221, 221) solid;
+ }
