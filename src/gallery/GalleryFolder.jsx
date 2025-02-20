@@ -86,7 +86,7 @@ const FolderViewer = () => {
     <div className="py-3">
     <div className="flex flex-col items-center ">
   {/* Folder Selection */}
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-4 md:w-[900px] ">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-4 md:w-[150vh] ">
     {folders.map((folder) => (
       <button
         key={folder.id}

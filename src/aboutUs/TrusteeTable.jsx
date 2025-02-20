@@ -42,8 +42,8 @@ const TrustTable = () => {
                 key={index}
                 className={index % 2 === 0 ? "bg-white" : "bg-[#FFFFF0]"}
               >
-                <td className="py-3 px-6 border TableText">{member.name}</td>
-                <td className="py-3 px-6 border TableText">{member.role}</td>
+                <td className="py-3 px-6 border font-bold text-lg ">{member.name}</td>
+                <td className="py-3 px-6 border font-bold text-lg ">{member.role}</td>
               </tr>
             ))}
           </tbody>

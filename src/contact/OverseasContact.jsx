@@ -27,7 +27,7 @@ const contacts = [
 const ContactTable = () => {
   return (
     <div className="container mx-auto py-12">
-     <div className="text-center mb-8 bor">
+     <div className="text-center mb-8 ">
         <div className="flex items-center justify-center gap-2">
           <img src={headingIcon} className="h-10" alt="icon" />
           <h2 className="fw-bold text-4xl primaryColor font-heading">
@@ -37,7 +37,7 @@ const ContactTable = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto">
+      {/* <div className="overflow-x-auto">
   <table className="min-w-full  shadow-md rounded-lg overflow-hidden table-auto border">
     <thead>
       <tr className="bg-[#800080] text-white text-sm md:text-xl">
@@ -63,7 +63,38 @@ const ContactTable = () => {
       ))}
     </tbody>
   </table>
-</div>
+</div> */}
+
+
+<div className="overflow-x-auto">
+        <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden ">
+          <thead>
+            <tr className="bg-[#800080] text-white">
+            <th className="py-3 px-6 text-left text-xl w-1/3 border">Location</th>
+              <th className="py-3 px-6 text-left text-xl w-1/3 border">Name</th>
+              <th className="py-3 px-6 text-left text-xl w-1/3 border">Phone</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {contacts.map((contact, index) => (
+              <tr
+                key={index}
+                className={index % 2 === 0 ? "bg-white border" : "bg-[#FFFFF0] border "}
+              >
+                <td className="py-3 md:font-bold md:text-lg px-6 flex items-center gap-2 text-xs">
+                <img src={contact.flag} alt={contact.location} className="h-5 w-8" />
+                {contact.location}</td>
+                <td className="py-3 px-6 border md:font-bold md:text-lg text-xs">{contact.name}</td>
+                <td className="py-3 px-3 border md:font-bold md:text-lg text-xs">
+                <a href={`tel:${contact.phone.replace(/\s+/g, "")}`} className="underline hover:text-blue-800">{contact.phone}</a></td>
+              </tr>
+              ))}
+          </tbody>
+          <hr className="text-white"/>
+
+          </table>
+      </div>
 
     </div>
   );

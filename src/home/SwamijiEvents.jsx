@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import headingIcon from "../assets/icon.png";
-
+import img3 from "../assets/EventUpcoming.jpg"
 export default function SeeOurProducts() {
   const [activeLink, setActiveLink] = useState("Upcoming Events");
 
   const links = [
-    { name: "Past Events", image: "/images/marigold.jpg" },
-    { name: "Ongoing Events", image: "/images/chrysanthemum.jpg" },
-    { name: "Upcoming Events", image: "/src/assets/EventUpcoming.jpg" },
+    { name: "Past Events", image: img3 },
+    { name: "Ongoing Events", image: img3 },
+    { name: "Upcoming Events", image: img3 },
   ];
 
   const activeImage = links.find((link) => link.name === activeLink)?.image;

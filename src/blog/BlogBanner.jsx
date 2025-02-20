@@ -4,7 +4,7 @@ import blogbanner from "../assets/BlogBanner.png";
 const Banner = () => {
     return (
         <div
-            className="relative bg-cover bg-center h-[450px] flex items-start"
+            className="relative bg-cover bg-center h-[100vh] flex items-start"
             style={{
                 backgroundImage: `url(${blogbanner})`,
             }}

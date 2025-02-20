@@ -15,7 +15,7 @@ const BlogSlider = () => {
   }, []);
 
   return (
-    <Container className="container py-12 overflow-hidden"> {/* Prevent Overflow */}
+    <Container className="container py-5 overflow-hidden"> {/* Prevent Overflow */}
       <div className="text-center mb-4 mt-8">
         <div className="d-flex align-items-center justify-content-center gap-4">
           <img src={headingIcon} className="h-10 md:h-10" alt="Icon Left" />
