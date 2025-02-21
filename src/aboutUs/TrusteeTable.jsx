@@ -26,12 +26,12 @@ const TrustTable = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden ">
+      <div className="overflow-x-auto flex justify-center">
+      <table className=" bg-white shadow-md rounded-lg overflow-hidden mx-auto">
           <thead>
             <tr className="bg-[#800080] text-white">
-              <th className="py-3 px-6 text-left text-xl w-1/2 border">Name</th>
-              <th className="py-3 px-6 text-left text-xl w-1/2 border">
+              <th className="py-3 px-6 text-left text-xl w-1/2 border-1">Name</th>
+              <th className="py-3 px-6 text-left text-xl w-1/2 border-1 ">
                 Board of Trustees
               </th>
             </tr>
@@ -42,8 +42,8 @@ const TrustTable = () => {
                 key={index}
                 className={index % 2 === 0 ? "bg-white" : "bg-[#FFFFF0]"}
               >
-                <td className="py-3 px-6 border font-bold text-lg ">{member.name}</td>
-                <td className="py-3 px-6 border font-bold text-lg ">{member.role}</td>
+                <td className="py-3 px-6 border-1 BorderColor font-bold text-lg ">{member.name}</td>
+                <td className="py-3 px-6 border-1 BorderColor font-bold text-lg ">{member.role}</td>
               </tr>
             ))}
           </tbody>

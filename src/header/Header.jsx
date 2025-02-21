@@ -18,18 +18,24 @@ const Navbar = () => {
 
 
         {/* Desktop Menu */}
-        <ul className=" hidden md:flex space-x-6 text-xl mt-3 mr-13 font-semibold " >
+        <ul className=" hidden md:flex space-x-5 text-xl mt-3 mr-5 font-semibold " >
           <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="  transition "></Link></li>
           <li><Link to="/about-swamiji" onClick={() => window.scrollTo(0, 0)} className="transition headercolor ">About Swamiji</Link></li>
           <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">About Us</Link></li>
           <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)} className="transition headercolor " >Ashtalakshmi  Puja</Link></li>
           <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Blog</Link></li>
           <li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Gallery</Link></li>
-          <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Donate</Link></li>
           <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="transition headercolor">Contact</Link></li>
           
           
         </ul>
+
+        {/* Donation Button */}
+        <div className="hidden md:block mr-5">
+          <a href="/donate" className="bg-[#800080] text-white px-3 py-2 rounded-full font-semibold hover:bg-yellow-600 transition ">
+          donate
+          </a>
+        </div>
         
 
         {/* CTA Button (Hidden on Mobile) */}

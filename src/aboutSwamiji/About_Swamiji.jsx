@@ -10,7 +10,7 @@ export default function About_Swamiji() {
     <div>
       <AboutSwamijiBanner/>
       <SwamiSubrahmanyamGiri/>
-      <AboutSwamiji4img/>
+      {/* <AboutSwamiji4img/> */}
       <DivineBlessing/>
       <Divinebtn/>
     </div>

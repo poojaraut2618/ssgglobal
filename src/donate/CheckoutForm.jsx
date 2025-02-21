@@ -93,12 +93,12 @@ const CheckoutForm = () => {
   return (
     <Container className="mt-5 mb-5">
       <Row className="justify-content-center">
-        <Col md={8}>
+        <Col md={6}>
           <Card className="shadow-lg p-4">
             <Card.Body>
               <div className="d-flex justify-content-center align-items-center gap-2 mb-4">
                 <img src={headingIcon} className="h-14" alt="icon" />
-                <h2 className="fw-bold fs-4 primaryColor">Your Contribution Builds a Stronger Community!</h2>
+                <h2 className="fw-bold fs-4 text-center primaryColor">Your Contribution Builds a Stronger Community!</h2>
                 <img src={headingIcon} className="h-14" alt="icon" />
               </div>
 
@@ -107,7 +107,7 @@ const CheckoutForm = () => {
 
               <Form onSubmit={handleSubmit}>
                 <Row>
-                  <Col md={6}>
+                  <Col md={12}>
                     <Form.Group className="mb-3">
                       <Form.Label>Full Name</Form.Label>
                       <Form.Control
@@ -119,7 +119,7 @@ const CheckoutForm = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col md={6}>
+                  <Col md={12}>
                     <Form.Group className="mb-3">
                       <Form.Label>Email</Form.Label>
                       <Form.Control
@@ -134,7 +134,7 @@ const CheckoutForm = () => {
                 </Row>
 
                 <Row>
-                  <Col md={6}>
+                  <Col md={12}>
                     <Form.Group className="mb-3">
                       <Form.Label>Address</Form.Label>
                       <Form.Control
@@ -146,7 +146,7 @@ const CheckoutForm = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col md={6}>
+                  <Col md={12}>
                     <Form.Group className="mb-3">
                       <Form.Label>Country</Form.Label>
                       <Form.Select name="country" onChange={handleChange} required>
@@ -181,7 +181,7 @@ const CheckoutForm = () => {
                   </div>
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="fw-bold w-100 primary-btn" disabled={!stripe || processing}>
+                <Button variant="primary" type="submit" className="fw-bold w-100 Donatebtn" disabled={!stripe || processing}>
                   {processing ? "Processing..." : "Donate"}
                 </Button>
               </Form>

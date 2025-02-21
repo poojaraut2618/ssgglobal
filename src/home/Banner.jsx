@@ -1,5 +1,5 @@
 import React from 'react'
-import bannerImage from "../assets/banner.png";
+import bannerImage from "../assets/HomeBanner.png";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -15,7 +15,7 @@ const Banner = () => {
       {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
 
       {/* Content */}
-      <div className="relative container mx-auto px-6 text-white">
+      <div className="relative container mx-auto px-6 text-gray-700">
         <h1 className="fw-bold text-4xl md:text-5xl max-w-md">
         Experience Divine Blessings with the Sacred Ashtalakshmi Puja
         </h1>

@@ -80,18 +80,18 @@ const ContactTable = () => {
             {contacts.map((contact, index) => (
               <tr
                 key={index}
-                className={index % 2 === 0 ? "bg-white border" : "bg-[#FFFFF0] border "}
+                className={index % 2 === 0 ? "bg-white border-1 BorderColor" : "bg-[#FFFFF0] border-1 BorderColor "}
               >
-                <td className="py-3 md:font-bold md:text-lg px-6 flex items-center gap-2 text-xs">
+                <td className="py-3 md:font-bold md:text-lg px-6  flex items-center gap-2 text-xs">
                 <img src={contact.flag} alt={contact.location} className="h-5 w-8" />
                 {contact.location}</td>
-                <td className="py-3 px-6 border md:font-bold md:text-lg text-xs">{contact.name}</td>
-                <td className="py-3 px-3 border md:font-bold md:text-lg text-xs">
+                <td className="py-3 px-6 border-1 BorderColor md:font-bold md:text-lg text-xs">{contact.name}</td>
+                <td className="py-3 px-3 border-1 BorderColor md:font-bold md:text-lg text-xs">
                 <a href={`tel:${contact.phone.replace(/\s+/g, "")}`} className="underline hover:text-blue-800">{contact.phone}</a></td>
               </tr>
               ))}
           </tbody>
-          <hr className="text-white"/>
+          <hr className="text-white "/>
 
           </table>
       </div>
