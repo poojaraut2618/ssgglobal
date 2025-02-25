@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { Container, Form, Button, Card, Alert, Row, Col } from "react-bootstrap";
 import headingIcon from "../assets/icon.png";
@@ -9,6 +9,8 @@ const countries = [
   { code: "IN", name: "India" },
   { code: "CA", name: "Canada" },
   { code: "AU", name: "Australia" },
+
+  { code: "AU", name: "Malsia" },
   { code: "FR", name: "France" },
   { code: "DE", name: "Germany" },
 ];

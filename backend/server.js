@@ -1,28 +1,42 @@
-const express = require("express");   // Import express
-const mongoose = require("mongoose"); // Import mongoose
-const dotenv = require("dotenv");     // Import dotenv (for secret keys)
-const cors = require("cors");         // Import cors
+/* eslint-disable no-undef */
+import dotenv from "dotenv";
+import express from "express";
+import Stripe from "stripe";
+import cors from "cors";
 
-dotenv.config(); // Load environment variables from .env file
+dotenv.config();
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-const app = express();  // Create an express app
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-app.use(cors());  // Enable cross-origin requests
-app.use(express.json());  // Allow JSON data in requests
+app.post("/create-payment-intent", async (req, res) => {
+  try {
+    const { amount, fullName, email, address, country } = req.body;
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log("✅ MongoDB Connected"))
-.catch((err) => console.log("❌ Error: ", err));
+    if (!amount || amount <= 0) {
+      return res.status(400).json({ error: "Invalid payment amount" });
+    }
 
-// Test Route (Check if API is working)
-app.get("/", (req, res) => {
-  res.send("Hello! Backend is working 🚀");
+    console.log("Received Payment Request:", req.body);
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount,
+      currency: "usd",
+      payment_method_types: ["card"],
+      receipt_email: email,
+      metadata: { fullName, address, country },
+    });
+
+    console.log("Payment Intent Created:", paymentIntent);
+
+    res.json({ clientSecret: paymentIntent.client_secret });
+  } catch (error) {
+    console.error("Payment Intent Error:", error.message);
+    res.status(400).json({ error: error.message });
+  }
 });
 
-// Start the Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

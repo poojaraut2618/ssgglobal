@@ -68,11 +68,19 @@ const ContactTable = () => {
 
 <div className="overflow-x-auto">
         <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden ">
+<<<<<<< Updated upstream
           <thead className="Border1">
             <tr className="bg-[#800080] text-white ">
             <th className="py-3 px-6 text-left text-xl w-1/3 border ">Location</th>
               <th className="py-3 px-6 text-left text-xl w-1/3 border Border2">Name</th>
               <th className="py-3 px-6 text-left text-xl w-1/3 border">Phone</th>
+=======
+          <thead>
+            <tr className="bg-[#800080] text-white">
+            <th className="py-3 px-6 text-left text-xl w-1/3 border-1 BorderColor">Location</th>
+              <th className="py-3 px-6 text-left text-xl w-1/3 border-1 BorderColor">Name</th>
+              <th className="py-3 px-6 text-left text-xl w-1/3 border-1 BorderColor">Phone</th>
+>>>>>>> Stashed changes
             </tr>
           </thead>
 
