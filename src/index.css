@@ -140,3 +140,28 @@ input
  {
   background-color: orange !important;
  }
+
+ .Border1
+ {
+  border: #800080 !important;  
+ }
+
+ .Border2
+ {  
+  border-right: #800080 !important;
+  border-left: #800080 !important;
+ }
+
+ .Border3
+ {  
+  border-right: 1px white !important;
+ }
+
+ .Border4
+ {  
+  
+  border-left: 1px white !important;
+ }
+
+ 
+

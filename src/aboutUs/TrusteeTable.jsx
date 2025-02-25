@@ -28,10 +28,10 @@ const TrustTable = () => {
 
       <div className="overflow-x-auto flex justify-center">
       <table className=" bg-white shadow-md rounded-lg overflow-hidden mx-auto">
-          <thead>
-            <tr className="bg-[#800080] text-white">
-              <th className="py-3 px-6 text-left text-xl w-1/2 border-1">Name</th>
-              <th className="py-3 px-6 text-left text-xl w-1/2 border-1 ">
+          <thead className="">
+            <tr className="bg-[#800080] text-white Border1 ">
+              <th className="py-3 px-6 text-left text-xl w-1/2 border-1 Border3">Name</th>
+              <th className="py-3 px-6 text-left text-xl w-1/2 border-1 Border4">
                 Board of Trustees
               </th>
             </tr>
@@ -40,7 +40,7 @@ const TrustTable = () => {
             {members.map((member, index) => (
               <tr
                 key={index}
-                className={index % 2 === 0 ? "bg-white" : "bg-[#FFFFF0]"}
+                className={index % 2 === 0 ? "bg-white  Border2" : "bg-[#FFFFF0] Border2"}
               >
                 <td className="py-3 px-6 border-1 BorderColor font-bold text-lg ">{member.name}</td>
                 <td className="py-3 px-6 border-1 BorderColor font-bold text-lg ">{member.role}</td>
@@ -49,7 +49,7 @@ const TrustTable = () => {
           </tbody>
           <tfoot>
             <tr>
-              <td colSpan="2" className="py-4 px-6 text-center text-xl font-bold">
+              <td colSpan="2" className="py-4 px-6 text-center text-xl font-bold ">
                 Registration Number: Ahmednagar/ 0000421 / 2024
               </td>
             </tr>

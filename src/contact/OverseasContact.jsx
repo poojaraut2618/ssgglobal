@@ -68,10 +68,10 @@ const ContactTable = () => {
 
 <div className="overflow-x-auto">
         <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden ">
-          <thead>
-            <tr className="bg-[#800080] text-white">
-            <th className="py-3 px-6 text-left text-xl w-1/3 border">Location</th>
-              <th className="py-3 px-6 text-left text-xl w-1/3 border">Name</th>
+          <thead className="Border1">
+            <tr className="bg-[#800080] text-white ">
+            <th className="py-3 px-6 text-left text-xl w-1/3 border ">Location</th>
+              <th className="py-3 px-6 text-left text-xl w-1/3 border Border2">Name</th>
               <th className="py-3 px-6 text-left text-xl w-1/3 border">Phone</th>
             </tr>
           </thead>
