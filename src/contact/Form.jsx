@@ -91,15 +91,7 @@ export default function Form() {
     ></textarea>
   </div>
 
-  {/* Centered Button */}
-  <div className="flex justify-center mt-4">
-    <button
-      type="submit"
-      className="primary-btn font-bold px-6 py-2 transition duration-300"
-    >
-      Reserve Now
-    </button>
-  </div>
+ 
 </form>
 
 
