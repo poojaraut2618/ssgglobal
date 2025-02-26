@@ -5,14 +5,15 @@ import headingIcon from "../assets/icon.png";
 
 const countries = [
   { code: "US", name: "United States" },
-  { code: "GB", name: "United Kingdom" },
+  { code: "UK", name: "United Kingdom" },
   { code: "IN", name: "India" },
   { code: "CA", name: "Canada" },
   { code: "AU", name: "Australia" },
-
-  { code: "AU", name: "Malsia" },
-  { code: "FR", name: "France" },
-  { code: "DE", name: "Germany" },
+  { code: "SG", name: "Singapore" },
+  { code: "MY", name: "Malaysia" },
+  { code: "SE", name: "Sweden" },
+  { code: "ID", name: "Indonesia" },
+  { code: "PH", name: "Philippines" },
 ];
 
 const CheckoutForm = () => {
